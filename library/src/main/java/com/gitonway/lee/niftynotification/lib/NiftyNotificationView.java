@@ -34,9 +34,9 @@ public class NiftyNotificationView {
 
     private static final String NULL_PARAMETERS_ARE_NOT_ACCEPTED = "Null parameters are not accepted";
 
-    public static final int TEXT_ID = android.R.id.message;
+    private static final int TEXT_ID = android.R.id.message;
 
-    public static final int IMAGE_ID = android.R.id.icon;
+    private static final int IMAGE_ID = android.R.id.icon;
 
     private Configuration configuration = null;
 
@@ -47,6 +47,8 @@ public class NiftyNotificationView {
     private Activity activity;
 
     private ViewGroup viewGroup;
+    
+    private ImageView imageView;
 
     private FrameLayout notifyView;
 
@@ -97,6 +99,10 @@ public class NiftyNotificationView {
         return new NiftyNotificationView(activity, text, effects, (ViewGroup) activity.findViewById(viewGroupResId), configuration);
     }
 
+    public ImageView getImageView()
+    {
+        return imageView;
+    }
 
     public long getInDuration() {
         return effects.getAnimator().getDuration();
@@ -190,6 +196,7 @@ public class NiftyNotificationView {
         ImageView image = null;
         if ((null != iconDrawable) || (0 != iconRes)) {
             image = initializeImageView();
+            this.imageView = image;
             contentView.addView(image, image.getLayoutParams());
         }
 
