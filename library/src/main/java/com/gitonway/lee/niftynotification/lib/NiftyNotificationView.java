@@ -34,9 +34,9 @@ public class NiftyNotificationView {
 
     private static final String NULL_PARAMETERS_ARE_NOT_ACCEPTED = "Null parameters are not accepted";
 
-    private static final int TEXT_ID = android.R.id.message;
+    public static final int TEXT_ID = android.R.id.message;
 
-    private static final int IMAGE_ID = android.R.id.icon;
+    public static final int IMAGE_ID = android.R.id.icon;
 
     private Configuration configuration = null;
 
