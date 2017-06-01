@@ -258,8 +258,8 @@ public class NiftyNotificationView {
         }
 
         RelativeLayout.LayoutParams imageParams = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.MATCH_PARENT);
+                maxValue,
+                maxValue);
         imageParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
         imageParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
 
