@@ -210,7 +210,7 @@ public class Manager extends Handler {
                     }
                     
                     View notifyView = notify.getView();
-                    ViewGroup notifyParentView = (ViewGroup) notifyView.getParent()
+                    ViewGroup notifyParentView = (ViewGroup) notifyView.getParent();
                     notify.getEffects().getAnimator().setDuration(notify.getConfiguration().animDuration).in(notifyParentView);
                     if(!isSticky){
                         sendMessageDelayed(notify, Messages.REMOVE_NOTIFICATION,
