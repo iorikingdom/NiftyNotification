@@ -208,8 +208,10 @@ public class Manager extends Handler {
                     } else {
                         notifyView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                     }
-
-                    notify.getEffects().getAnimator().setDuration(notify.getConfiguration().animDuration).in(notify.getView());
+                    
+                    View notifyView = notify.getView();
+                    ViewGroup notifyParentView = (ViewGroup) notifyView.getParent()
+                    notify.getEffects().getAnimator().setDuration(notify.getConfiguration().animDuration).in(notifyParentView);
                     if(!isSticky){
                         sendMessageDelayed(notify, Messages.REMOVE_NOTIFICATION,
                                 notify.getDispalyDuration()
